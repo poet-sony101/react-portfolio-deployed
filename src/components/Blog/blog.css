@@ -170,19 +170,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 0.75rem;
     margin-bottom: 0.85rem;
     font-size: 0.75rem;
 }
 
 /* Category Accent Badges */
 .categoryBadge {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     font-weight: 700;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
-    padding: 0.2rem 0.6rem;
+    padding: 0.22rem 0.65rem;
     border-radius: 9999px;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    line-height: 1.2;
+    flex-shrink: 1;
 }
 
 .categorySoftware {
@@ -214,6 +219,9 @@
     display: flex;
     align-items: center;
     gap: 0.35rem;
+    font-size: 0.74rem;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .blogCardTitle {

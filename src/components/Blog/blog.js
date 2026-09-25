@@ -52,7 +52,7 @@ Even if an engineer accidentally forgets a tenant filter in an ORM query, Postgr
     {
         id: 'applied-physics-bug-hunting',
         category: 'physics',
-        categoryLabel: 'Applied Physics & First Principles',
+        categoryLabel: 'Applied Physics',
         title: 'Deconstructing Complex Chaos: What Applied Physics Taught Me About Bug Hunting',
         date: 'July 18, 2026',
         readTime: '5 min read',
