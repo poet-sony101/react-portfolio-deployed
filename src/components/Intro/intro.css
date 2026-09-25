@@ -1,89 +1,298 @@
-#intro {
-    height: calc(100vh - 4rem);
-    width: 100vw;
-    max-width: 75rem;
-    margin: 0 auto;
-    overflow: hidden;
+.introSection {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7.5rem 1.5rem 3.5rem;
     position: relative;
+    overflow: hidden;
 }
 
-.bg {
-    position: absolute;
-    top: -4rem;
-    right: 0;
-    z-index: -1;
-    object-fit: cover;
-    height: 100vh;
+.introContainer {
+    width: 100%;
+    max-width: 72rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 3.5rem;
+    align-items: center;
 }
 
+/* Left Hero Content */
 .introContent {
-    height: 100vh;
-    width: 100vw;
-    padding: 2rem;
-    font-size: 3rem;
-    font-weight: 700;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: flex-start;
+    z-index: 2;
 }
 
-.hello {
-    font-size: 1.75rem;
-    font-weight: 100;
+.statusWrapper {
+    margin-bottom: 1.25rem;
 }
 
-.introName {
-    color: yellow;
+.heroTitle {
+    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    font-weight: 800;
+    line-height: 1.12;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+    color: #ffffff;
 }
 
-.introPara {
-    font-size: medium;
-    font-weight: 300;
-    letter-spacing: 1px;
+.heroBio {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 36rem;
 }
 
-.btn {
-    background: white;
-    margin: 1rem 0;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 2rem;
+.highlightName {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.heroAlias {
+    color: var(--accent-cyan);
+    font-weight: 700;
+}
+
+.pillTag {
+    display: inline-block;
+    padding: 0.1rem 0.6rem;
+    margin: 0 0.25rem;
+    background: rgba(139, 92, 246, 0.12);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 9999px;
+    color: var(--primary-light);
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+.heroActions {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.heroCta, .heroExplore {
     cursor: pointer;
 }
 
-.btn a{
-    text-decoration: none;
-    color: #000000;
+/* Hero Metrics Bar */
+.heroMetrics {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    padding: 1.2rem 1.8rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(12px);
+    width: 100%;
+    max-width: 36rem;
 }
 
-.btn:hover {
-    background: yellow;
-    color: black;
-    transform: scale(1.10);
-    transition: 0.3s;
+.metricItem {
+    display: flex;
+    flex-direction: column;
 }
 
-.btnImg {
+.metricValue {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1;
+    background: linear-gradient(135deg, #ffffff 30%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.metricLabel {
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-top: 0.35rem;
+}
+
+.metricDivider {
+    width: 1px;
+    height: 2.2rem;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Right Column Visual */
+.introVisual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.profileGlowRing {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, rgba(6, 182, 212, 0.2) 50%, transparent 70%);
+    filter: blur(50px);
+    z-index: 0;
+    animation: glowPulse 6s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+    0% { transform: scale(0.95); opacity: 0.6; }
+    100% { transform: scale(1.15); opacity: 0.9; }
+}
+
+.profileCard {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 360px;
+    border-radius: 2rem;
+    padding: 1.25rem;
+    background: linear-gradient(145deg, rgba(23, 29, 49, 0.7) 0%, rgba(13, 17, 30, 0.9) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8),
+                0 0 40px -10px rgba(139, 92, 246, 0.2);
+}
+
+.profileImageContainer {
+    width: 100%;
+    aspect-ratio: 1 / 1.15;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 28%, rgba(139, 92, 246, 0.25) 0%, rgba(20, 26, 44, 0.85) 55%, rgba(9, 12, 22, 0.98) 100%);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.profilePhoto {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    margin: 0 0.25rem;
-    height: 1rem;
+    object-position: center 10%;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    filter: drop-shadow(0 12px 25px rgba(0, 0, 0, 0.6));
 }
 
-@media screen and (max-width:840px) {
-    .bg {
-        right: -10vw
+.profileCard:hover .profilePhoto {
+    transform: scale(1.03);
+}
+
+/* Floating Micro-Badges */
+.floatingBadge {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 0.95rem;
+    background: rgba(14, 18, 32, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 9999px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #f1f5f9;
+    z-index: 2;
+    transition: transform 0.3s ease;
+    animation: floatAnimation 4s ease-in-out infinite;
+}
+
+.badgeTopLeft {
+    top: 10%;
+    left: -15px;
+    animation-delay: 0s;
+}
+
+.badgeBottomRight {
+    bottom: 12%;
+    right: -20px;
+    animation-delay: 1.5s;
+}
+
+.badgeBottomLeft {
+    bottom: -15px;
+    left: 10%;
+    animation-delay: 2.5s;
+}
+
+.badgeIconCode { color: #38bdf8; }
+.badgeIconDesign { color: #f472b6; }
+.badgeIconSys { color: #34d399; }
+
+@keyframes floatAnimation {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-7px); }
+}
+
+/* Responsiveness */
+@media screen and (max-width: 960px) {
+    .introContainer {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
     }
+
     .introContent {
-        font-size: 10vw;
+        align-items: center;
     }
-    .hello {
-        font-size: 4.5vw;
+
+    .heroBio {
+        max-width: 42rem;
     }
-    
+
+    .heroActions {
+        justify-content: center;
+    }
+
+    .heroMetrics {
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .introVisual {
+        order: -1;
+        margin-bottom: 1rem;
+    }
+
+    .profileCard {
+        max-width: 290px;
+    }
 }
 
-@media screen and (max-width:480px) {
-    .bg {
-        right: -20vw
+@media screen and (max-width: 520px) {
+    .introSection {
+        padding: 6.5rem 1rem 2.5rem;
     }
+
+    .heroMetrics {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.25rem 1rem;
+    }
+
+    .metricDivider {
+        display: none;
+    }
+
+    .floatingBadge {
+        padding: 0.45rem 0.75rem;
+        font-size: 0.74rem;
+    }
+
+    .badgeTopLeft { left: -5px; }
+    .badgeBottomRight { right: -5px; }
+    .badgeBottomLeft { left: 5px; }
 }

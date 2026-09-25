@@ -1,68 +1,1028 @@
-#works {
+.worksSection {
+    padding: 6rem 1.5rem;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.worksContainer {
+    width: 100%;
+    max-width: 76rem;
     margin: 0 auto;
-    min-height: calc(100vh - 4rem);
-    width: 100vw;
-    max-width: 60rem;
+}
+
+/* ========================================================
+   PRIMARY SECTION SWITCHER: COMMERCIAL VS HACKATHONS
+   ======================================================== */
+.worksCategorySwitch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.switchTabBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.65rem 1.5rem;
+    border-radius: 9999px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #94a3b8;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    font-family: inherit;
+}
+
+.switchTabBtn:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+}
+
+.switchTabBtn.active {
+    color: #ffffff;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.25) 0%, rgba(59, 130, 246, 0.25) 100%);
+    border-color: rgba(139, 92, 246, 0.5);
+    box-shadow: 0 4px 20px -3px rgba(139, 92, 246, 0.4);
+}
+
+.switchCountPill {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.15rem 0.55rem;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #e2e8f0;
+}
+
+.switchTabBtn.active .switchCountPill {
+    background: var(--primary);
+    color: #ffffff;
+}
+
+.switchCountPill.goldPill {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.switchTabBtn.active .switchCountPill.goldPill {
+    background: #f59e0b;
+    color: #0b0f19;
+}
+
+/* ========================================================
+   HACKATHON STATS BANNER
+   ======================================================== */
+.hackathonStatsBanner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, rgba(20, 26, 46, 0.7) 0%, rgba(11, 15, 28, 0.85) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.25rem;
+    padding: 1.25rem 2rem;
+    margin-bottom: 2.75rem;
+    gap: 1.5rem;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.hackStatBox {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.hackStatIcon {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.goldGlow {
+    background: rgba(245, 158, 11, 0.12);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.cyanGlow {
+    background: rgba(6, 182, 212, 0.12);
+    color: #38bdf8;
+    border: 1px solid rgba(6, 182, 212, 0.3);
+}
+
+.emeraldGlow {
+    background: rgba(16, 185, 129, 0.12);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.hackStatContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.hackStatNum {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+}
+
+.hackStatLabel {
+    font-size: 0.78rem;
+    color: #94a3b8;
+    margin-top: 0.15rem;
+    line-height: 1.4;
+}
+
+.hackStatDivider {
+    width: 1px;
+    height: 2.5rem;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* ========================================================
+   SUB-FILTER TABS
+   ======================================================== */
+.filterTabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filterBtn {
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    font-size: 0.86rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    font-family: inherit;
+}
+
+.filterBtn:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.18);
+    transform: translateY(-1px);
+}
+
+.filterBtn.active {
+    color: #ffffff;
+    background: var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 4px 20px -3px rgba(139, 92, 246, 0.55);
+}
+
+/* ========================================================
+   PROJECTS GRID
+   ======================================================== */
+.projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.projectCard {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0;
+    border-radius: var(--radius-lg);
+    background: rgba(13, 17, 30, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 0.35s ease;
+}
+
+.projectCard:hover {
+    transform: translateY(-5px);
+    border-color: rgba(139, 92, 246, 0.35);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7),
+                0 0 25px -5px rgba(139, 92, 246, 0.15);
+}
+
+/* Mockup Header Bar */
+.cardHeaderBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.25rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.windowDots {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+}
+
+.dotRed { background: #ef4444; }
+.dotYellow { background: #f59e0b; }
+.dotGreen { background: #10b981; }
+
+.projectCategoryPill {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.22rem 0.65rem;
+    border-radius: 9999px;
+    border: 1px solid currentColor;
+}
+
+/* Hackathon Header Elements */
+.hackathonOrgTag {
+    display: flex;
+    align-items: center;
+}
+
+.hackathonName {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    letter-spacing: -0.01em;
+}
+
+.hackStandingBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.22rem 0.65rem;
+    border-radius: 9999px;
+}
+
+.standingGold {
+    background: rgba(245, 158, 11, 0.12);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+.standingCyan {
+    background: rgba(6, 182, 212, 0.12);
+    color: #38bdf8;
+    border: 1px solid rgba(6, 182, 212, 0.35);
+}
+
+.standingGreen {
+    background: rgba(16, 185, 129, 0.12);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+.standingPurple {
+    background: rgba(139, 92, 246, 0.12);
+    color: #c084fc;
+    border: 1px solid rgba(139, 92, 246, 0.35);
+}
+
+.standingAmber {
+    background: rgba(217, 119, 6, 0.12);
+    color: #fbbf24;
+    border: 1px solid rgba(217, 119, 6, 0.35);
+}
+
+.standingBlue {
+    background: rgba(59, 130, 246, 0.12);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.35);
+}
+
+/* Preview Window */
+.previewContainer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.previewWeb {
+    background: #090c15;
+}
+
+.previewGraphic {
+    background: #ffffff;
+}
+
+.previewHackathon {
+    background: #080a12;
+}
+
+.projectImage {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.imageWeb {
+    object-fit: cover;
+    object-position: top center;
+}
+
+.imageGraphic {
+    object-fit: contain;
+    padding: 1.5rem;
+}
+
+.imageMobile {
+    object-fit: contain;
+    background: #0d0620;
+    padding: 0.5rem 0.25rem;
+}
+
+.projectCard:hover .projectImage {
+    transform: scale(1.04);
+}
+
+/* Hackathon Visualizer */
+.hackathonVisualizer {
+    width: 100%;
+    height: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 0 1rem;
+    overflow: hidden;
 }
 
-.worksTitle {
-    margin: 1rem 0;
-    font-size: 3rem;
+.visualizerPattern {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 16px 16px;
+    opacity: 0.4;
 }
 
-.worksDesc {
-    font-weight: 300;
-    font-size: 1rem;
-    max-width: 45rem;
-}
-
-.worksImgs {
+.visualizerEmblem {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 1.25rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    width: 100vw;
-    max-width: 65rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    transition: transform 0.3s ease;
 }
 
-.worksImg {
-    object-fit: cover;
-    height: 20rem;
-    margin: 0.5rem;
+.projectCard:hover .visualizerEmblem {
+    transform: scale(1.1) rotate(-3deg);
 }
 
-.worksImg:hover{
-    transform: scale(1.10);
-    border: 20px solid #161513;
-    border-radius: 10px;
-    transition: 0.3s;
+.visualizerInitial {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.02em;
 }
 
-.workBtn {
-    margin: 3rem 0;
-    padding: 0.5rem 2.5rem;
+.visualizerOrgBadge {
+    position: absolute;
+    bottom: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    z-index: 2;
+}
+
+.previewOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(7, 9, 15, 0.65);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+}
+
+.projectCard:hover .previewOverlay {
+    opacity: 1;
+}
+
+.previewBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.3rem;
+    background: rgba(255, 255, 255, 0.95);
+    color: #090a10;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 9999px;
     border: none;
-    border-radius: 2rem;
-    background: white;
     cursor: pointer;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease, background 0.2s ease;
+    font-family: inherit;
+}
+
+.previewBtn:hover {
+    background: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Card Body */
+.cardBody {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.projectHeaderMeta {
+    margin-bottom: 0.4rem;
+}
+
+.projectSubtitleTag {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--accent-cyan);
+    letter-spacing: 0.02em;
+}
+
+.hackathonProjectTag {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: #fbbf24;
+    letter-spacing: 0.02em;
+}
+
+.projectTitle {
+    font-size: 1.18rem;
+    font-weight: 700;
+    margin-bottom: 0.65rem;
+    color: #ffffff;
+    line-height: 1.35;
+    transition: color 0.2s ease;
+}
+
+.projectTitle:hover {
+    color: var(--accent-cyan);
+}
+
+.projectDesc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+}
+
+.projectTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.projectTag {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #cbd5e1;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    padding: 0.22rem 0.65rem;
+    border-radius: 9999px;
+}
+
+.cardFooter {
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projectActionLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: var(--primary-light);
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+    transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.projectActionLink:hover {
+    color: #ffffff;
+    gap: 0.6rem;
+}
+
+.projectChatLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.38rem 0.8rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.projectChatLink:hover {
+    background: #10b981;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px -3px rgba(16, 185, 129, 0.4);
+}
+
+/* Callout */
+.worksCallout {
+    margin-top: 4.5rem;
+    padding: 2.25rem 2.75rem;
+    border-radius: var(--radius-xl);
+    background: linear-gradient(135deg, rgba(23, 29, 49, 0.7) 0%, rgba(13, 17, 30, 0.85) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.calloutText {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.35rem;
+}
+
+.calloutSub {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+}
+
+/* ========================================================
+   PROJECT CASE STUDY / LIGHTBOX MODAL
+   ======================================================== */
+.projectModalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(4, 6, 12, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    animation: modalFadeIn 0.25s ease-out forwards;
+    overflow-y: auto;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.projectModalCard {
+    width: 100%;
+    max-width: 52rem;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #0d111e;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 1.5rem;
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.9),
+                0 0 40px -10px rgba(139, 92, 246, 0.2);
+    animation: modalScaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes modalScaleUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modalHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.modalHeaderLeft {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+}
+
+.modalSubtitle {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.modalCloseBtn {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #cbd5e1;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.modalCloseBtn:hover {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: rgba(239, 68, 68, 0.4);
+    color: #ffffff;
+    transform: rotate(90deg);
+}
+
+/* Modal Image / Visualizer Frame */
+.modalImageContainer {
+    width: 100%;
+    max-height: 24rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    background: #080a12;
+}
+
+.modalVisualizer {
+    width: 100%;
+    height: 18rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalVisualizerEmblem {
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 1.5rem;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.modalVisualizerOrg {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+    padding: 0.3rem 0.9rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 2;
+}
+
+.modalImage {
+    max-width: 100%;
+    max-height: 24rem;
+}
+
+.modalImgWeb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.modalImgGraphic {
+    object-fit: contain;
+    padding: 2rem;
+    background: #ffffff;
+    width: 100%;
+}
+
+.modalImgMobile {
+    object-fit: contain;
+    background: #0d0620;
+    max-height: 24rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+/* Modal Body */
+.modalBody {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.modalTitle {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.3;
+}
+
+.modalDescription {
     font-size: 1rem;
+    color: #cbd5e1;
+    line-height: 1.7;
 }
 
-.workBtn:hover {
-    background: yellow;
-    color: black;
-    transform: scale(1.10);
-    transition: 0.3s;
+/* Problem & Solution 2-Column Box */
+.modalProblemSolution {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
 
-@media screen and (max-width:585px) {
-    .worksImg {
-        height: 48vw;
+.problemBox, .solutionBox {
+    padding: 1.25rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.problemBox {
+    border-left: 3px solid #ef4444;
+}
+
+.solutionBox {
+    border-left: 3px solid #10b981;
+}
+
+.boxLabel {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.redText { color: #f87171; }
+.greenText { color: #34d399; }
+
+.boxText {
+    font-size: 0.88rem;
+    color: #cbd5e1;
+    line-height: 1.55;
+}
+
+.modalSectionHeading {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-cyan);
+    margin-bottom: 0.75rem;
+}
+
+.modalHighlightsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.modalHighlightItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.92rem;
+    color: #e2e8f0;
+    line-height: 1.5;
+}
+
+.highlightCheck {
+    width: 1.35rem;
+    height: 1.35rem;
+    border-radius: 50%;
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #10b981;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+}
+
+.modalTagsSection .projectTags {
+    margin-bottom: 0;
+}
+
+.modalActionRow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    flex-wrap: wrap;
+}
+
+.modalPrimaryBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    box-shadow: 0 4px 18px -3px rgba(16, 185, 129, 0.5);
+    transition: all 0.25s ease;
+}
+
+.modalPrimaryBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px -4px rgba(16, 185, 129, 0.7);
+    filter: brightness(1.1);
+}
+
+.modalSecondaryBtn {
+    padding: 0.75rem 1.4rem;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #cbd5e1;
+    font-size: 0.92rem;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+.modalSecondaryBtn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+/* ========================================================
+   RESPONSIVENESS
+   ======================================================== */
+@media screen and (max-width: 900px) {
+    .hackathonStatsBanner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+        gap: 1.25rem;
+    }
+
+    .hackStatDivider {
+        width: 100%;
+        height: 1px;
+    }
+
+    .modalProblemSolution {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .worksSection {
+        padding: 4.5rem 1.25rem;
+    }
+
+    .worksCategorySwitch {
+        width: 100%;
+    }
+
+    .switchTabBtn {
+        flex: 1;
+        justify-content: center;
+        padding: 0.6rem 1rem;
+        font-size: 0.86rem;
+    }
+
+    .projectsGrid {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+    }
+
+    .worksCallout {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.75rem 1.25rem;
+    }
+
+    .modalBody {
+        padding: 1.5rem;
+    }
+
+    .modalTitle {
+        font-size: 1.35rem;
+    }
+
+    .modalActionRow {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .modalPrimaryBtn, .modalSecondaryBtn {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .worksSection {
+        padding: 3.5rem 1rem;
+    }
+
+    .switchTabBtn {
+        font-size: 0.78rem;
+        padding: 0.5rem 0.75rem;
+        gap: 0.4rem;
+    }
+
+    .filterBtn {
+        padding: 0.45rem 1rem;
+        font-size: 0.82rem;
+    }
+
+    .projectTitle {
+        font-size: 1.1rem;
+    }
+
+    .cardBody {
+        padding: 1.25rem;
     }
 }

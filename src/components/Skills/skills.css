@@ -1,82 +1,246 @@
-#skills {
-    overflow: hidden;
-    width: 100vw;
-    max-width: 65rem;
+.skillsSection {
+    padding: 6rem 1.5rem;
+    width: 100%;
+    position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    text-align: center;
+}
+
+.skillsContainer {
+    width: 100%;
+    max-width: 72rem;
     margin: 0 auto;
 }
 
-.skillTitle {
-    font-size: 3rem;
+/* Section Header */
+.sectionHeader {
+    text-align: center;
+    max-width: 44rem;
+    margin: 0 auto 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sectionEyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--primary-light);
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.25);
+    padding: 0.35rem 0.9rem;
+    border-radius: 9999px;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+}
+
+.sectionTitle {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.sectionSubtitle {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Core Competencies Strip */
+.skillsPillStrip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1.5rem;
+    padding: 0.6rem 1.25rem;
+    background: rgba(15, 19, 32, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 9999px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.skillsPillLabel {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--primary-light);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.skillsPillItem {
+    font-size: 0.8rem;
     font-weight: 600;
-    padding-top: 3rem;
+    padding: 0.25rem 0.7rem;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    color: #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.skillsPillItem:hover {
+    background: rgba(139, 92, 246, 0.15);
+    border-color: rgba(139, 92, 246, 0.3);
+    color: #ffffff;
+}
+
+/* Bento Grid */
+.bentoGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.bentoCard {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.bentoCardLarge {
+    grid-column: span 2;
+    background: linear-gradient(135deg, rgba(26, 32, 56, 0.75) 0%, rgba(15, 19, 32, 0.7) 100%);
+    border-color: rgba(139, 92, 246, 0.25);
+}
+
+.bentoCardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 1.5rem;
 }
 
-.skillDesc {
-    font-weight: 400;
-    font-size: 1rem;
-    max-width: 51rem;
-    padding: 0 2rem;
-}
-
-.skillBars {
-    margin: 1.5rem;
-    width: 100vw;
-    max-width: 80%;
-    text-align: left;
-}
-
-.skillBar {
+.bentoIconWrapper {
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     display: flex;
-    margin: 1rem;
-    padding: 1.5rem 2rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    background: rgb(50, 50, 50);
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
 }
 
-.skillBar:hover {
-    background: rgb(125, 125, 125);
-    transform: scale(1.10);
-    transition: 0.3s;
+.bentoCard:hover .bentoIconWrapper {
+    transform: scale(1.1) rotate(-3deg);
 }
 
-.skillBarText h2 {
-    color: yellow;
+.codeAccent { color: #38bdf8; }
+.designAccent { color: #f472b6; }
+.analyticalAccent { color: #c084fc; }
+.marketingAccent { color: #f59e0b; }
+.hardwareAccent { color: #34d399; }
+.videoAccent { color: #a78bfa; }
+.writingAccent { color: #fbbf24; }
+
+.bentoCategoryBadge {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.04);
+    padding: 0.25rem 0.65rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.skillBarImg {
-    object-fit: cover;
-    height: 3rem;
-    width: 3rem;
-    margin-right: 2rem;
+.bentoTitle {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #ffffff;
 }
 
-.skillBarText>p {
-    font-size: 0.9rem;
-    font-weight: 200;
+.bentoDescription {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
 }
 
-@media screen and (max-width:720px) {
-    .skillBarText>p {
-        font-size: 2vw;
+.bentoTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.bentoTag {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.3rem 0.75rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 9999px;
+    color: #cbd5e1;
+    transition: all 0.2s ease;
+}
+
+.bentoCard:hover .bentoTag {
+    background: rgba(139, 92, 246, 0.1);
+    border-color: rgba(139, 92, 246, 0.25);
+    color: #ffffff;
+}
+
+.bentoTagHighlight {
+    background: rgba(168, 85, 247, 0.16) !important;
+    border-color: rgba(168, 85, 247, 0.4) !important;
+    color: #f3e8ff !important;
+    font-weight: 600 !important;
+    box-shadow: 0 0 10px -2px rgba(168, 85, 247, 0.35);
+}
+
+.bentoTagHighlightGold {
+    background: rgba(245, 158, 11, 0.16) !important;
+    border-color: rgba(245, 158, 11, 0.45) !important;
+    color: #fef3c7 !important;
+    font-weight: 600 !important;
+    box-shadow: 0 0 10px -2px rgba(245, 158, 11, 0.35);
+}
+
+/* Responsiveness */
+@media screen and (max-width: 1024px) {
+    .bentoGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .bentoCardLarge {
+        grid-column: span 2;
     }
 }
 
-@media screen and (max-width:480px) {
-    .skillBarText>p {
-        font-size: 3vw;
+@media screen and (max-width: 720px) {
+    .skillsSection {
+        padding: 4rem 1rem;
     }
-    .skillBarImg {
-        height: 2.25rem;
-        width: 2.25rem;
+
+    .skillsPillStrip {
+        border-radius: var(--radius-lg);
+        padding: 0.85rem 1rem;
+        gap: 0.5rem;
     }
-    .skillBarText>h2 {
-        font-size: 5vw;
+
+    .bentoGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .bentoCardLarge {
+        grid-column: span 1;
+    }
+
+    .bentoCard {
+        padding: 1.5rem;
     }
 }
