@@ -433,7 +433,7 @@ const Works = () => {
                                 className={`filterBtn ${activeCommFilter === 'all' ? 'active' : ''}`}
                                 onClick={() => setActiveCommFilter('all')}
                             >
-                                All Works ({commercialItems.length})
+                                Some Of My Works ({commercialItems.length})
                             </button>
                             <button 
                                 className={`filterBtn ${activeCommFilter === 'web' ? 'active' : ''}`}
