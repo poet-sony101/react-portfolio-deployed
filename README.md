@@ -1,70 +1,150 @@
-# Getting Started with Create React App
+# Poet Sony — Developer Portfolio & Engineering Writings
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img src="src/assets/hackathon-thumbn-ai.png" alt="Poet Sony Portfolio Banner" width="100%" style="border-radius: 12px;"/>
+</p>
 
-## Available Scripts
+<p align="center">
+  <strong>Oluwaniyi Amao (Poet Sony)</strong><br>
+  Full-Stack Software Engineer & Applied Physics Student · 4x Hackathon Finalist
+</p>
 
-In the project directory, you can run:
+<p align="center">
+  <a href="https://github.com/poet-sony101/react-portfolio-deployed">
+    <img src="https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React 18" />
+  </a>
+  <a href="https://github.com/poet-sony101/react-portfolio-deployed">
+    <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript ES6+" />
+  </a>
+  <a href="https://github.com/poet-sony101/react-portfolio-deployed">
+    <img src="https://img.shields.io/badge/CSS3-Modern_Glassmorphism-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
+  </a>
+  <a href="https://github.com/poet-sony101/react-portfolio-deployed">
+    <img src="https://img.shields.io/badge/Architecture-Single_Page_App-8B5CF6?style=flat-square" alt="SPA" />
+  </a>
+  <a href="https://github.com/poet-sony101/react-portfolio-deployed">
+    <img src="https://img.shields.io/badge/Design_Language-2026_Obsidian-0F172A?style=flat-square" alt="Obsidian Glassmorphism" />
+  </a>
+</p>
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🌟 Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A premier personal web application and technical portfolio engineered for **Oluwaniyi Amao (Poet Sony)**. Built with React and structured around a bespoke **2026 Obsidian Glassmorphism** design system, this platform showcases full-stack client applications, rapid zero-to-one hackathon innovations, engineering essays, and interactive CLI tooling.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ✨ Key Features & Architecture
 
-### `npm run build`
+### 1. 🏆 Dual-Mode Works Showcase
+Seamlessly toggles between two specialized project galleries via an interactive segmented controller:
+* **💼 Client & Commercial Works (6 Projects)**: Production client portals, brand identity systems, and SaaS platforms (StoqBox, GMG Salon & Spa, El Akubé Collection, Logo Knox, Boucherie, Story Board Films).
+* **⚡ Hackathons & Competitions (7 Projects)**: Rapid hackathon prototypes, awards, and technical schematics with dedicated Problem/Solution breakdowns:
+  * **Thumbn(AI)l** — *Top 6 Finalist @ Monad Blitz Lagos*
+  * **UNICONNECT 1.0** — *Top 5 (4th Place) @ PESSA Innovation Challenge*
+  * **UNICONNECT 2.0** — *11th Place @ SEES Hackathon 2026*
+  * **BudTrack** — *Quarter-Finalist @ OPay Hackathon Challenge*
+  * **KLOVA** — *Top 7 Finalist @ PIDEC 1.0 (Passive Drainage Bio-Filter System)*
+  * **PayStack Hackathon & Xylem Challenge** — *Upcoming Sprint & Innovation Pipeline*
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2. ✍️ Dedicated "Blog & Writings" Page (`#/blog`)
+* Editorial writing experience inspired by modern engineering publications.
+* Multi-category filtering across **Software & Systems**, **Applied Physics**, **Poetry & Spoken Word**, and **Public Speaking**.
+* Distraction-free, responsive article reading modal with syntax highlighting and keyboard navigation (`ESC` to close).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 3. 💻 Interactive Developer Terminal
+* A custom in-browser command line terminal allowing technical visitors and recruiters to explore skills, run system diagnostics, view project stats, or trigger hidden commands (`help`, `skills`, `projects`, `clear`, `contact`).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 4. 📱 Adaptive Responsive Navigation
+* Zero-squash layout architecture with dynamic viewport adaptation from 4K ultrawides down to 320px mobile screens.
+* Integrated mobile drawer menu with smooth glassmorphism backdrop blur.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Tech Stack & Tooling
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Domain | Technologies & Libraries |
+| :--- | :--- |
+| **Frontend Core** | React 18, React DOM, Modern JSX |
+| **Styling & Theme** | Native Modular CSS, CSS Custom Properties, Backdrop Filters, Obsidian Glassmorphism |
+| **Icons & Visuals** | Custom Feather/Lucide-inspired SVG icon system, 2x Retina Live Captures, Octane 3D Renders |
+| **Performance** | Webpack 5 production minification, Gzip compression, WebP/PNG asset optimization |
+| **Deployment** | GitHub Pages / Vercel / Netlify compatible static build |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📁 Project Directory Structure
 
-## Learn More
+```text
+portfolio/
+├── public/
+│   ├── favicon.ico
+│   ├── index.html
+│   └── manifest.json
+├── src/
+│   ├── assets/              # Optimized project screenshots & brand assets
+│   ├── components/
+│   │   ├── About/           # Bio, background, and applied physics credentials
+│   │   ├── Blog/            # Somkene-inspired editorial writings & reader modal
+│   │   ├── Contact/         # Direct email, social, and WhatsApp inquiry form
+│   │   ├── Footer/          # Site-wide quick links and copyright
+│   │   ├── Intro/           # Hero section with animated callouts
+│   │   ├── Navbar/          # Responsive desktop & mobile drawer navigation
+│   │   ├── Skills/          # Technical competencies & engineering toolkit
+│   │   ├── Terminal/        # In-browser interactive developer CLI
+│   │   ├── Works/           # Dual-mode Commercial & Hackathon showcase + Lightbox
+│   │   └── common/          # Reusable icons and shared UI primitives
+│   ├── App.js               # Primary application router & layout orchestrator
+│   ├── App.css              # Global tokens, reset styles, and scrollbars
+│   └── index.js             # React DOM entry point
+└── package.json
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🚀 Getting Started Locally
 
-### Code Splitting
+### Prerequisites
+* **Node.js**: v18+ (tested with Node v22)
+* **npm**: v9+
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Installation & Run
 
-### Analyzing the Bundle Size
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/poet-sony101/react-portfolio-deployed.git
+   cd react-portfolio-deployed
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-### Making a Progressive Web App
+3. **Start local development server**:
+   ```bash
+   npm start
+   ```
+   Open [http://localhost:3000](http://localhost:3000) to view the application in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+4. **Build for production**:
+   ```bash
+   npm run build
+   ```
+   Compiles optimized production static files into the `build/` directory with 0 errors and 0 warnings.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📬 Contact & Inquiries
 
-### Deployment
+* **Developer**: Oluwaniyi Amao (Poet Sony)
+* **Email**: [sonymaxwellie14@gmail.com](mailto:sonymaxwellie14@gmail.com)
+* **WhatsApp**: [+234 915 976 7637](https://wa.me/+2349159767637)
+* **GitHub**: [@poet-sony101](https://github.com/poet-sony101)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center">
+  Crafted with precision by <strong>Poet Sony</strong> · 2026 Obsidian Glassmorphism System
+</p>
