@@ -270,7 +270,7 @@ const hackathonItems = [
         standingRank: "Quarter-Finalist",
         hasImage: true,
         image: HackathonBudTrack,
-        imageType: "mobile",
+        imageType: "web",
         themeGradient: "linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)",
         iconLetter: "B",
         accentColor: "#8b5cf6",
