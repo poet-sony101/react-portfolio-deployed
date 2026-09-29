@@ -195,6 +195,138 @@ we were here, we dared, and we spoke.`
     }
 ];
 
+const parseInlineMarkdown = (text) => {
+    if (!text) return null;
+    const inlineRegex = /(\*\*([^*]+)\*\*|\*([^*]+)\*|`([^`]+)`)/g;
+    let lastIndex = 0;
+    const elements = [];
+    let match;
+    let key = 0;
+
+    while ((match = inlineRegex.exec(text)) !== null) {
+        if (match.index > lastIndex) {
+            elements.push(text.substring(lastIndex, match.index));
+        }
+        if (match[0].startsWith('**')) {
+            elements.push(<strong key={`b-${key++}`}>{match[2]}</strong>);
+        } else if (match[0].startsWith('*')) {
+            elements.push(<em key={`i-${key++}`}>{match[3]}</em>);
+        } else if (match[0].startsWith('`')) {
+            elements.push(<code key={`c-${key++}`} className="blogInlineCode">{match[4]}</code>);
+        }
+        lastIndex = inlineRegex.lastIndex;
+    }
+    if (lastIndex < text.length) {
+        elements.push(text.substring(lastIndex));
+    }
+    return elements;
+};
+
+const parseArticleBlocks = (content) => {
+    if (!content) return [];
+    const lines = content.split('\n');
+    const blocks = [];
+    let currentBlock = null;
+
+    let inCode = false;
+    let codeLang = '';
+    let codeLines = [];
+
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        const trimmed = line.trim();
+
+        if (inCode) {
+            if (trimmed.startsWith('```')) {
+                blocks.push({
+                    type: 'code',
+                    lang: codeLang,
+                    code: codeLines.join('\n')
+                });
+                inCode = false;
+                codeLang = '';
+                codeLines = [];
+            } else {
+                codeLines.push(line);
+            }
+            continue;
+        }
+
+        if (trimmed.startsWith('```')) {
+            if (currentBlock) {
+                blocks.push(currentBlock);
+                currentBlock = null;
+            }
+            inCode = true;
+            codeLang = trimmed.replace('```', '').trim() || 'code';
+            codeLines = [];
+            continue;
+        }
+
+        if (trimmed.startsWith('### ')) {
+            if (currentBlock) {
+                blocks.push(currentBlock);
+                currentBlock = null;
+            }
+            blocks.push({
+                type: 'heading',
+                text: trimmed.replace('### ', '').trim()
+            });
+            continue;
+        }
+
+        const numberedMatch = trimmed.match(/^(\d+)\.\s+(.*)$/);
+        if (numberedMatch) {
+            if (currentBlock && currentBlock.type !== 'numbered-list') {
+                blocks.push(currentBlock);
+                currentBlock = null;
+            }
+            if (!currentBlock) {
+                currentBlock = { type: 'numbered-list', items: [] };
+            }
+            currentBlock.items.push(numberedMatch[2]);
+            continue;
+        }
+
+        const bulletMatch = trimmed.match(/^[-*]\s+(.*)$/);
+        if (bulletMatch) {
+            if (currentBlock && currentBlock.type !== 'bullet-list') {
+                blocks.push(currentBlock);
+                currentBlock = null;
+            }
+            if (!currentBlock) {
+                currentBlock = { type: 'bullet-list', items: [] };
+            }
+            currentBlock.items.push(bulletMatch[1]);
+            continue;
+        }
+
+        if (trimmed === '') {
+            if (currentBlock) {
+                blocks.push(currentBlock);
+                currentBlock = null;
+            }
+            continue;
+        }
+
+        // Regular paragraph text
+        if (currentBlock && currentBlock.type === 'paragraph') {
+            currentBlock.text += ' ' + trimmed;
+        } else {
+            if (currentBlock) {
+                blocks.push(currentBlock);
+            }
+            currentBlock = { type: 'paragraph', text: trimmed };
+        }
+    }
+
+    if (currentBlock) {
+        blocks.push(currentBlock);
+    }
+
+    return blocks;
+};
+
 const Blog = ({ onBack }) => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [activeModalPost, setActiveModalPost] = useState(null);
@@ -378,19 +510,69 @@ const Blog = ({ onBack }) => {
 
                             <div className="blogModalBody">
                                 {activeModalPost.isPoem ? (
-                                    <div className="poetryStanza">
-                                        {activeModalPost.content}
+                                    <div className="poetryContainer">
+                                        {activeModalPost.content.split('\n\n').map((stanza, sIdx) => {
+                                            const trimmedStanza = stanza.trim();
+                                            if (!trimmedStanza) return null;
+                                            return (
+                                                <div key={sIdx} className="poetryStanza">
+                                                    {trimmedStanza.split('\n').map((line, lIdx) => (
+                                                        <p key={lIdx} className="poetryLine">
+                                                            {parseInlineMarkdown(line.trim())}
+                                                        </p>
+                                                    ))}
+                                                </div>
+                                            );
+                                        })}
                                     </div>
                                 ) : (
-                                    activeModalPost.content.split('\n\n').map((paragraph, pIdx) => {
-                                        if (paragraph.startsWith('### ')) {
-                                            return <h3 key={pIdx} style={{ color: '#fff', fontSize: '1.3rem', margin: '1.8rem 0 0.8rem' }}>{paragraph.replace('### ', '')}</h3>;
+                                    parseArticleBlocks(activeModalPost.content).map((block, bIdx) => {
+                                        if (block.type === 'heading') {
+                                            return (
+                                                <h3 key={bIdx} className="blogSectionHeading">
+                                                    {parseInlineMarkdown(block.text)}
+                                                </h3>
+                                            );
                                         }
-                                        if (paragraph.startsWith('```')) {
-                                            const code = paragraph.replace(/```(sql|typescript)?\n/g, '').replace(/```/g, '');
-                                            return <pre key={pIdx} className="technicalCodeSnippet"><code>{code}</code></pre>;
+                                        if (block.type === 'code') {
+                                            return (
+                                                <div key={bIdx} className="codeBlockWrapper">
+                                                    <div className="codeHeader">
+                                                        <span className="codeLangBadge">{block.lang}</span>
+                                                    </div>
+                                                    <pre className="technicalCodeSnippet">
+                                                        <code>{block.code}</code>
+                                                    </pre>
+                                                </div>
+                                            );
                                         }
-                                        return <p key={pIdx}>{paragraph}</p>;
+                                        if (block.type === 'numbered-list') {
+                                            return (
+                                                <ol key={bIdx} className="blogNumberedList">
+                                                    {block.items.map((item, iIdx) => (
+                                                        <li key={iIdx}>
+                                                            {parseInlineMarkdown(item)}
+                                                        </li>
+                                                    ))}
+                                                </ol>
+                                            );
+                                        }
+                                        if (block.type === 'bullet-list') {
+                                            return (
+                                                <ul key={bIdx} className="blogBulletList">
+                                                    {block.items.map((item, iIdx) => (
+                                                        <li key={iIdx}>
+                                                            {parseInlineMarkdown(item)}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            );
+                                        }
+                                        return (
+                                            <p key={bIdx} className="blogParagraph">
+                                                {parseInlineMarkdown(block.text)}
+                                            </p>
+                                        );
                                     })
                                 )}
                             </div>
