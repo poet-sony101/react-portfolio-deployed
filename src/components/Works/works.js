@@ -11,6 +11,7 @@ import HackathonUniConnect1 from '../../assets/hackathon-uniconnect-1.png';
 import HackathonUniConnect2 from '../../assets/hackathon-uniconnect-2.png';
 import HackathonKlova from '../../assets/hackathon-klova.jpg';
 import HackathonBudTrack from '../../assets/hackathon-budtrack.png';
+import HedgeComputersImg from '../../assets/hedge-computers.png';
 import { 
     SparklesIcon, 
     ArrowUpRightIcon, 
@@ -25,6 +26,27 @@ import {
 
 /* Commercial & Client Works */
 const commercialItems = [
+    {
+        id: "comm-hedge",
+        title: "Hedge Computers — E-Commerce Dealership & Workstation Portal",
+        subtitle: "Next.js E-Commerce, Supabase & Laptop Discovery Engine",
+        category: "web",
+        categoryLabel: "Web Platform",
+        accentColor: "#ef4444",
+        image: HedgeComputersImg,
+        imageType: "web",
+        summary: "Digital dealership platform and dynamic inventory engine for Computer Village's premier laptop and MacBook specialist.",
+        description: "Architected and deployed a modern e-commerce web platform for Hedge Computers in Computer Village, Ikeja, Lagos. Built with Next.js 16, React 19, and Supabase, the platform empowers professionals, creators, and students to discover verified USA-used and brand-new laptops with an interactive multi-spec laptop finder, real-time inventory management, warranty verifications, and direct WhatsApp sales workflows.",
+        deliverables: [
+            "Interactive Laptop Finder with dynamic CPU, RAM, and GPU filtering",
+            "Real-time inventory database synchronized with Supabase & CloudStore",
+            "Product spotlight showcase for executive workstations and MacBooks",
+            "One-click WhatsApp direct sales routing with pre-populated specs",
+            "Mobile-first responsive architecture optimized for low-latency browsing"
+        ],
+        tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "Framer Motion", "E-Commerce"],
+        inquiryText: "Hi Poet Sony, I saw the Hedge Computers platform in your portfolio and would like to build an e-commerce platform!"
+    },
     {
         id: "comm-1",
         title: "StoqBox — Grocery & Essential Box Subscription Platform",

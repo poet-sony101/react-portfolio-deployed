@@ -14,6 +14,32 @@ import {
 
 const experiences = [
     {
+        id: 'stoqbox',
+        role: "Full-Stack Software Engineer (Full-Time)",
+        company: "StoqBox",
+        location: "Lagos, Nigeria",
+        flag: "🇳🇬",
+        country: "Nigeria",
+        period: "Sept 2026 — Present",
+        type: "Full-Time Role",
+        category: "web",
+        description: "Leading full-stack engineering for Nigeria's premier grocery and kitchen essential subscription service. Architecting custom bundle builders, recurring automated delivery schedules, real-time cart state management, and customer portal dashboards with high-availability cloud infrastructure.",
+        skills: ["React", "TypeScript", "Node.js", "Tailwind CSS", "Supabase", "Subscription Systems", "E-Commerce"]
+    },
+    {
+        id: 'hedge-computers',
+        role: "Full-Stack Web Developer & Systems Engineer",
+        company: "Hedge Computers",
+        location: "Computer Village, Ikeja, Lagos, Nigeria",
+        flag: "🇳🇬",
+        country: "Nigeria",
+        period: "Sept 2026 — Present",
+        type: "Commercial Engagement",
+        category: "web",
+        description: "Architected and deployed the official Next.js e-commerce and dealership inventory portal for Computer Village's premier laptop dealership. Engineered interactive multi-criteria laptop and MacBook search engines, real-time Supabase product catalogs, WhatsApp quote automation, and mobile-first responsive architecture.",
+        skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "Framer Motion", "Inventory Architecture"]
+    },
+    {
         id: 'freelance',
         role: "Freelance Web Developer",
         company: "Self-employed",

@@ -26,7 +26,8 @@ const clientList = [
     { id: '12', name: 'Creative Minds Hub', services: 'Graphics & Video Editing' },
     { id: '13', name: 'New Dawn Technologies', services: 'Content Writing & Computer Repairs' },
     { id: '14', name: 'TechSavvy Solutions', services: 'Digital Marketing' },
-    { id: '15', name: 'Bright Future Academy', services: 'Graphics & Video Editing' }
+    { id: '15', name: 'Bright Future Academy', services: 'Graphics & Video Editing' },
+    { id: '16', name: 'Hedge Computers', services: 'E-Commerce & Dealership Web Portal' }
 ];
 
 const Contact = () => {
@@ -100,7 +101,7 @@ const Contact = () => {
                         Trusted by diverse <span className="gradient-text">brands & businesses</span>.
                     </h2>
                     <p className="sectionSubtitle">
-                        I've partnered with over 15 companies across commerce, tech, creative studios, and education to engineer solutions that make an impact.
+                        I've partnered with over 16 companies across commerce, tech, creative studios, and education to engineer solutions that make an impact.
                     </p>
                 </div>
 
