@@ -228,7 +228,7 @@ const Contact = () => {
                         {/* Availability Pill */}
                         <div className="availabilityCard">
                             <span className="status-dot"></span>
-                            <span>Currently accepting freelance projects & contract engagements.</span>
+                            <span className="availabilityText">Currently accepting freelance projects & contract engagements.</span>
                         </div>
                     </div>
 
