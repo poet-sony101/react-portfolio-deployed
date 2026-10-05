@@ -28,7 +28,8 @@ const clientList = [
     { id: '14', name: 'TechSavvy Solutions', services: 'Digital Marketing' },
     { id: '15', name: 'Bright Future Academy', services: 'Graphics & Video Editing' },
     { id: '16', name: 'Hedge Computers', services: 'E-Commerce & Dealership Web Portal' },
-    { id: '17', name: 'Amaoso Solar Technology', services: 'Industrial Luminaire & Solar Sizing Portal' }
+    { id: '17', name: 'Amaoso Solar Technology', services: 'Industrial Luminaire & Solar Sizing Portal' },
+    { id: '18', name: "Ezeougu's J Portfolio", services: 'Personal Brand & Digital CV Portal' }
 ];
 
 const Contact = () => {
@@ -102,7 +103,7 @@ const Contact = () => {
                         Trusted by diverse <span className="gradient-text">brands & businesses</span>.
                     </h2>
                     <p className="sectionSubtitle">
-                        I've partnered with over 17 companies across commerce, tech, creative studios, and education to engineer solutions that make an impact.
+                        I've partnered with over 18 companies across commerce, tech, creative studios, and education to engineer solutions that make an impact.
                     </p>
                 </div>
 

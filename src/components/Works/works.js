@@ -13,16 +13,17 @@ import HackathonKlova from '../../assets/hackathon-klova.jpg';
 import HackathonBudTrack from '../../assets/hackathon-budtrack.png';
 import HedgeComputersImg from '../../assets/hedge-computers.png';
 import AmaosoImg from '../../assets/amaoso.png';
+import EzeouguPortfolioImg from '../../assets/ezeougu-portfolio.png';
 import { 
     SparklesIcon, 
     ArrowUpRightIcon, 
     WhatsAppIcon, 
     EyeIcon, 
-    CloseIcon,
-    CheckIcon,
-    BriefcaseIcon,
-    TrophyIcon,
-    RocketIcon
+    CloseIcon, 
+    CheckIcon, 
+    BriefcaseIcon, 
+    TrophyIcon, 
+    RocketIcon 
 } from '../common/Icons';
 
 /* Commercial & Client Works */
@@ -48,6 +49,27 @@ const commercialItems = [
         ],
         tags: ["React 19", "TypeScript", "Vite", "Tailwind CSS v4", "Solar Sizing Engine", "B2B E-Commerce", "Web Performance"],
         inquiryText: "Hi Poet Sony, I saw the Amaoso Solar Technology platform in your portfolio and would like to build an industrial web platform!"
+    },
+    {
+        id: "comm-ezeougu",
+        title: "Ezeougu's J Portfolio — Creative Motion & Video Editing Platform",
+        subtitle: "Digital CV, Video Editing Showcase & Client Booking Funnel",
+        category: "web",
+        categoryLabel: "Client Portfolio",
+        accentColor: "#d4a373",
+        image: EzeouguPortfolioImg,
+        imageType: "web",
+        summary: "Bespoke digital portfolio and interactive CV platform engineered for video editor and motion graphics designer Ezeougu Joshua Uchechukwu.",
+        description: "Designed and engineered a distinctive personal brand platform for Lagos-based video editor and motion graphics designer Ezeougu Joshua Uchechukwu. Delivered in October 2026, the website features a tailored warm espresso and bronze palette, an interactive showcase of high-converting advertisements and 4K course series, downloadable authentic CV document integration, and a multi-channel booking funnel across WhatsApp, direct mail, and phone call.",
+        deliverables: [
+            "Warm espresso (#141211) & bronze aesthetic with bespoke UI typography",
+            "Motion graphics and commercial video editing showcase gallery",
+            "Authentic downloadable PDF CV document integration (Ezeougu_Joshua_CV.pdf)",
+            "Direct multi-channel client inquiry routing (WhatsApp, Direct Email, Call)",
+            "Mobile-first responsive architecture with smooth micro-interactions"
+        ],
+        tags: ["HTML5", "CSS3", "JavaScript", "UI/UX Design", "Portfolio Architecture", "Client Delivery", "Responsive Web"],
+        inquiryText: "Hi Poet Sony, I saw Ezeougu's J Portfolio in your works and would like to build a custom portfolio website!"
     },
     {
         id: "comm-hedge",

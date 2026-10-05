@@ -53,6 +53,19 @@ const experiences = [
         skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "Framer Motion", "Inventory Architecture"]
     },
     {
+        id: 'ezeougu-portfolio',
+        role: "Web Developer & UI/UX Designer",
+        company: "Ezeougu's J Portfolio",
+        location: "Lagos, Nigeria",
+        flag: "🇳🇬",
+        country: "Nigeria",
+        period: "Oct 2026",
+        type: "Client Contract",
+        category: "web",
+        description: "Designed and engineered an elegant, high-performance portfolio website and digital CV platform for video editor and motion graphics designer Ezeougu Joshua Uchechukwu. Architected a warm espresso and bronze visual identity, interactive video editing and VFX showcases, multi-channel client booking funnels (WhatsApp, email, call), and authentic downloadable CV integration.",
+        skills: ["Web Development", "UI/UX Design", "Responsive Layouts", "Client Ingestion", "Digital CV Architecture"]
+    },
+    {
         id: 'freelance',
         role: "Freelance Web Developer",
         company: "Self-employed",
@@ -68,7 +81,7 @@ const experiences = [
     {
         id: 'ifeotech',
         role: "MacBook Hardware Repair Specialist (Apprentice)",
-        company: "ifeotech",
+        company: "IFEOTECH",
         location: "Lagos, Nigeria",
         flag: "🇳🇬",
         country: "Nigeria",
@@ -201,7 +214,7 @@ const educationList = [
     {
         id: 'ifeotech-macbook',
         degree: "MacBook Hardware Engineering & Logic Board Repairs (Apprenticeship)",
-        institution: "ifeotech",
+        institution: "IFEOTECH",
         location: "Lagos, Nigeria",
         period: "Oct 2026",
         status: "Active Apprenticeship",
