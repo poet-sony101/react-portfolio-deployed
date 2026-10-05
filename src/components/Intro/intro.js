@@ -98,7 +98,7 @@ const Intro = ({ onNavigate }) => {
                     {/* Metric Highlights */}
                     <div className="heroMetrics">
                         <div className="metricItem">
-                            <span className="metricValue">15+</span>
+                            <span className="metricValue">17+</span>
                             <span className="metricLabel">Clients Served</span>
                         </div>
                         <div className="metricDivider"></div>

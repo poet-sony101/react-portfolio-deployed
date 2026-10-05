@@ -31,6 +31,15 @@ const techStack = [
 
 const certificates = [
     {
+        title: "MacBook Hardware Engineering & Repairs Apprenticeship",
+        acronym: "Cert",
+        standing: "Active Apprenticeship",
+        institution: "ifeotech",
+        location: "Lagos, Nigeria",
+        year: "2026",
+        skills: "MacBook Repairs, Logic Board Diagnostics, Micro-soldering, Apple Hardware"
+    },
+    {
         title: "Advanced Diploma in Software Engineering",
         acronym: "ADSE",
         standing: "★ 89.1% Distinction",

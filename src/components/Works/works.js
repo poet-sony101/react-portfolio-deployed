@@ -12,6 +12,7 @@ import HackathonUniConnect2 from '../../assets/hackathon-uniconnect-2.png';
 import HackathonKlova from '../../assets/hackathon-klova.jpg';
 import HackathonBudTrack from '../../assets/hackathon-budtrack.png';
 import HedgeComputersImg from '../../assets/hedge-computers.png';
+import AmaosoImg from '../../assets/amaoso.png';
 import { 
     SparklesIcon, 
     ArrowUpRightIcon, 
@@ -26,6 +27,28 @@ import {
 
 /* Commercial & Client Works */
 const commercialItems = [
+    {
+        id: "comm-amaoso",
+        title: "Amaoso — Solar Technology & Industrial Luminaire Portal",
+        subtitle: "React 19, TypeScript, Solar Sizing Engine & B2B Procurement",
+        category: "web",
+        categoryLabel: "Industrial Platform",
+        accentColor: "#c9313b",
+        image: AmaosoImg,
+        imageType: "web",
+        summary: "Modern high-performance web platform, interactive solar lighting sizing estimator, and B2B procurement engine for Lagos Amaoso Solar Technology Co., Ltd.",
+        description: "Architected and engineered a cutting-edge web application for Lagos Amaoso Solar Technology Co., Ltd. (amaoso.com) to replace their legacy WordPress infrastructure. Built on React 19, TypeScript, Vite 8, and Tailwind CSS v4, the platform serves municipal contractors, estate developers, and international distributors with real-time luminaire filtering, a solar lighting sizing & diesel fuel savings calculator, automated multi-step RFQ generation, and direct WhatsApp engineering channels.",
+        deliverables: [
+            "Interactive Solar Lighting Sizing & Diesel Savings Estimator",
+            "Multi-category product catalog with technical datasheet inspector",
+            "Multi-step Proforma Request For Quote (RFQ) wizard with automated spec injection",
+            "Direct WhatsApp engineering routing with pre-populated project parameters",
+            "Factory showcase detailing 70+ lamp housing molds, 100+ patents, and production workshops",
+            "Maryland Lagos HQ and Warri regional distribution depot locator"
+        ],
+        tags: ["React 19", "TypeScript", "Vite", "Tailwind CSS v4", "Solar Sizing Engine", "B2B E-Commerce", "Web Performance"],
+        inquiryText: "Hi Poet Sony, I saw the Amaoso Solar Technology platform in your portfolio and would like to build an industrial web platform!"
+    },
     {
         id: "comm-hedge",
         title: "Hedge Computers — E-Commerce Dealership & Workstation Portal",

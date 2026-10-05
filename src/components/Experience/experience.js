@@ -14,6 +14,19 @@ import {
 
 const experiences = [
     {
+        id: 'amaoso',
+        role: "Full-Stack Web Engineer (Full-Time)",
+        company: "Amaoso (Lagos Amaoso Solar Technology)",
+        location: "Maryland, Lagos, Nigeria",
+        flag: "🇳🇬",
+        country: "Nigeria",
+        period: "Sept 2026 — Present",
+        type: "Full-Time Role",
+        category: "web",
+        description: "Leading the complete digital engineering and web rebuild for Lagos Amaoso Solar Technology Co., Ltd. Architected high-performance React 19 + TypeScript industrial platform featuring an interactive solar lighting wattage & diesel savings estimator, filterable multi-category industrial luminaire catalog, automated RFQ wizard, and multi-depot logistics coordination.",
+        skills: ["React 19", "TypeScript", "Vite", "Tailwind CSS v4", "Solar Sizing Engine", "B2B E-Commerce", "Web Architecture"]
+    },
+    {
         id: 'stoqbox',
         role: "Full-Stack Software Engineer (Full-Time)",
         company: "StoqBox",
@@ -51,6 +64,19 @@ const experiences = [
         category: "web",
         description: "End-to-end development of custom, responsive web platforms for small businesses and personal brands using React, Next.js, and Tailwind CSS. Managing full client lifecycles: requirement discovery, architectural planning, interface design, performance optimization, and branded polish.",
         skills: ["React", "Next.js", "Tailwind CSS", "JavaScript", "UI/UX Architecture", "Client Delivery"]
+    },
+    {
+        id: 'ifeotech',
+        role: "MacBook Hardware Repair Specialist (Apprentice)",
+        company: "ifeotech",
+        location: "Lagos, Nigeria",
+        flag: "🇳🇬",
+        country: "Nigeria",
+        period: "Oct 2026",
+        type: "Hardware Apprenticeship",
+        category: "it",
+        description: "Intensive specialized technical apprenticeship focused on Apple MacBook hardware diagnostics, logic board micro-soldering, power rail troubleshooting, component-level fault tracing, and precision device restoration.",
+        skills: ["MacBook Repairs", "Logic Board Diagnostics", "Micro-soldering", "Apple Hardware", "Hardware Diagnostics"]
     },
     {
         id: 'born-king',
@@ -172,6 +198,19 @@ const experiences = [
 ];
 
 const educationList = [
+    {
+        id: 'ifeotech-macbook',
+        degree: "MacBook Hardware Engineering & Logic Board Repairs (Apprenticeship)",
+        institution: "ifeotech",
+        location: "Lagos, Nigeria",
+        period: "Oct 2026",
+        status: "Active Apprenticeship",
+        statusClass: "statusProgress",
+        accentClass: "hardwareAccent",
+        iconType: "cpu",
+        description: "Intensive specialized hardware engineering apprenticeship mastering Apple MacBook diagnostics, logic board micro-soldering, component-level fault tracing, chip-level troubleshooting, and precision device restoration.",
+        skills: ["MacBook Repairs", "Logic Board Diagnostics", "Micro-soldering", "Hardware Engineering", "Apple Hardware"]
+    },
     {
         id: 'unilag-physics',
         degree: "Bachelor of Science (B.Sc.), Applied Physics with Electronics",
