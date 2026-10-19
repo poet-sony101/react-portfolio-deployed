@@ -46,7 +46,7 @@ const experiences = [
         location: "Computer Village, Ikeja, Lagos, Nigeria",
         flag: "🇳🇬",
         country: "Nigeria",
-        period: "Sept 2026 — Present",
+        period: "Sept 2026 — Oct 2026",
         type: "Commercial Engagement",
         category: "web",
         description: "Architected and deployed the official Next.js e-commerce and dealership inventory portal for Computer Village's premier laptop dealership. Engineered interactive multi-criteria laptop and MacBook search engines, real-time Supabase product catalogs, WhatsApp quote automation, and mobile-first responsive architecture.",

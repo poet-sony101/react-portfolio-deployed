@@ -122,9 +122,9 @@ const Contact = () => {
                     </div>
                 </div>
 
-                {/* Clients Grid Preview */}
+                {/* Complete Clients Grid (1 to 18) */}
                 <div className="clientsCompactGrid">
-                    {clientList.slice(0, 6).map((client) => (
+                    {clientList.map((client) => (
                         <div key={client.id} className="clientGridCard glass-card">
                             <span className="clientGridIndex">{client.id}</span>
                             <div>

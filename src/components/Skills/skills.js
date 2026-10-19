@@ -44,8 +44,8 @@ const skillCategories = [
         icon: <CpuIcon size={28} className="bentoIcon hardwareAccent" />,
         title: "Systems & Hardware Engineering",
         categoryBadge: "Infrastructure",
-        description: "Diagnosing hardware faults, motherboard diagnostics, electronics repairs, local networking, and system security hardening.",
-        skills: ["Hardware Diagnostics", "Computer Repairs", "Electronics Repair", "Motherboard Diagnostics", "System Upgrades", "Local Networking"]
+        description: "Specialized in Apple MacBook repairs, hardware fault diagnostics, motherboard electronics troubleshooting, component-level soldering, and workstation maintenance.",
+        skills: ["MacBook Repairs", "Hardware Diagnostics", "Computer Repairs", "Electronics Repair", "Motherboard Diagnostics", "System Upgrades", "Local Networking"]
     },
     {
         id: 'marketing',
