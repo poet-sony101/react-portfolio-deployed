@@ -14,6 +14,19 @@ import {
 
 const experiences = [
     {
+        id: 'fatrooster',
+        role: "Senior Web Developer",
+        company: "Fat Rooster",
+        location: "Ikate Lekki & Elegushi, Lagos, Nigeria",
+        flag: "🇳🇬",
+        country: "Nigeria",
+        period: "Oct 2026 — Present",
+        type: "Senior Engineering Role",
+        category: "web",
+        description: "Leading frontend and e-commerce web engineering for Fat Rooster (@fatrooster.ng), Lagos' premier fast-casual culinary and wood-fired pizza brand across Ikate Lekki and Sol Beach Elegushi. Architected high-performance Next.js 16 + React 19 digital storefront and direct online ordering engine featuring interactive category menus, customizable spice level matrices, dynamic slide-out cart drawers with multi-location pickup and beach cabana dispatch, automated WhatsApp order routing, and instant delivery integrations with Mano and Glovo.",
+        skills: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS v4", "E-Commerce", "Cart Architecture", "WhatsApp Automation", "Web Performance"]
+    },
+    {
         id: 'amaoso',
         role: "Full-Stack Web Engineer (Full-Time)",
         company: "Amaoso (Lagos Amaoso Solar Technology)",
@@ -537,7 +550,7 @@ const Experience = () => {
                                     state changes behave like thermodynamic equilibria, API latency follows network fluid dynamics, and database queries require optimal algorithmic trajectories.
                                 </p>
                                 <p>
-                                    Over the past three years, I have applied this analytical rigor across <strong>15+ client platforms</strong> and international teams in the <strong>US, the UK, and Nigeria</strong>. 
+                                    Over the past three years, I have applied this analytical rigor across <strong>18+ client platforms</strong> and international teams in the <strong>US, the UK, and Nigeria</strong>. 
                                     Whether architecting real-time messaging pipelines for <em>UniConnect</em>, engineering AI-powered micro-investing flows for <em>BudTrack</em>, or designing conversion-optimized websites, 
                                     my focus remains unwavering: <strong>fast, scalable, resilient software wrapped in intuitive, pixel-perfect user interfaces</strong>.
                                 </p>

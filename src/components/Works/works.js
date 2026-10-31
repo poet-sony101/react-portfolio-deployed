@@ -14,6 +14,7 @@ import HackathonBudTrack from '../../assets/hackathon-budtrack.png';
 import HedgeComputersImg from '../../assets/hedge-computers.png';
 import AmaosoImg from '../../assets/amaoso.png';
 import EzeouguPortfolioImg from '../../assets/ezeougu-portfolio.png';
+import FatRoosterImg from '../../assets/fatrooster.png';
 import { 
     SparklesIcon, 
     ArrowUpRightIcon, 
@@ -28,6 +29,29 @@ import {
 
 /* Commercial & Client Works */
 const commercialItems = [
+    {
+        id: "comm-fatrooster",
+        title: "Fat Rooster — Digital Storefront & Online Ordering Engine",
+        subtitle: "Next.js 16, React 19, Dynamic Cart & WhatsApp Order Routing",
+        category: "web",
+        categoryLabel: "E-Commerce & Food Tech",
+        accentColor: "#f97316",
+        image: FatRoosterImg,
+        imageType: "web",
+        summary: "High-performance digital storefront, interactive culinary menu, and automated multi-location order dispatch platform for Fat Rooster Lagos.",
+        description: "Architected and engineered the modern digital ordering platform for Fat Rooster (@fatrooster.ng), Lagos' premier culinary spot for crispy chicken & chips, spicy peppered wings, and wood-fired pizzas across Richmond Estate (Ikate Lekki) and Sol Beach (Elegushi Gate 2). Built with Next.js 16, React 19, TypeScript, and Tailwind CSS v4, the platform features instant menu filtering, real-time search, customizable spice-level selectors, an interactive slide-out cart drawer, and automated checkout routing directly to WhatsApp dispatch and third-party delivery partners (Mano & Glovo).",
+        deliverables: [
+            "Interactive digital menu with instant category filtering across signature chicken, wood-fired pizzas, platters, sides, and drinks",
+            "Real-time food item search query matching with instant results",
+            "Customizable spice level configuration (Mild, Medium Rooster Heat, Lagos Pepper Hot 🔥)",
+            "Dynamic slide-out Cart Drawer with real-time quantity modifiers, item price calculations (₦), and order notes",
+            "Automated WhatsApp checkout router generating structured order payloads with customer location and itemized totals",
+            "Multi-location fulfillment routing for Ikate Lekki Flagship Kitchen and Sol Beach Elegushi beachfront cabana delivery",
+            "Direct integration links with Mano and Glovo for instant delivery dispatch across Lekki, Ikate, Chevron, and Victoria Island"
+        ],
+        tags: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS v4", "E-Commerce", "Cart Architecture", "WhatsApp Automation", "Food Tech"],
+        inquiryText: "Hi Poet Sony, I saw the Fat Rooster digital storefront in your portfolio and would like to build an e-commerce / ordering platform!"
+    },
     {
         id: "comm-amaoso",
         title: "Amaoso — Solar Technology & Industrial Luminaire Portal",

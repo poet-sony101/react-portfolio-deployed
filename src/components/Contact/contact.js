@@ -21,7 +21,7 @@ const clientList = [
     { id: '07', name: 'StoqBox', services: 'Website & App Development' },
     { id: '08', name: 'Poppin', services: 'App Development' },
     { id: '09', name: 'Boucherie', services: 'Website Development' },
-    { id: '10', name: 'Fat Rooster', services: 'Website Development' },
+    { id: '10', name: 'Fat Rooster', services: 'Digital Storefront & Online Ordering' },
     { id: '11', name: 'Suf-Del Communications', services: 'Computer Repairs' },
     { id: '12', name: 'Creative Minds Hub', services: 'Graphics & Video Editing' },
     { id: '13', name: 'New Dawn Technologies', services: 'Content Writing & Computer Repairs' },
